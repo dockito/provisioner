@@ -26,3 +26,5 @@ You can provision it on a CoreOS cluster running this provisioner by simply:
 ```bash
 curl -F my-application=@sample.fig.yml http://provisioner.local.dockito.org
 ```
+
+Where `my-apllication` can be any name to describe your set of services.
