@@ -1,0 +1,19 @@
+{
+  "name": "dockito-provisioner",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node bin/server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.10.4",
+    "multer": "^0.1.6",
+    "rsvp": "^3.0.14",
+    "shelljs": "^0.3.0",
+    "underscore": "^1.7.0"
+  }
+}

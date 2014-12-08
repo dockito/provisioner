@@ -1,0 +1,7 @@
+local:
+  build: .
+  volumes:
+    - .:/usr/src/app
+  environment:
+    VIRTUAL_HOST: provisioner.local.dockito.org
+    VIRTUAL_PORT: 80
