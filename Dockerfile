@@ -1,23 +1,7 @@
 FROM node:0.10.33
 
-RUN apt-get -y -q update && \
-    apt-get install ruby ruby-dev -y -q && \
-    apt-get install golang -y -q && \
-    apt-get install git -y -q
-
-RUN git clone https://github.com/coreos/fleet.git /usr/lib/fleet && \
-    cd /usr/lib/fleet && \
-    ./build && \
-    ln -s /usr/lib/fleet/bin/fleetctl /usr/local/bin/fleetctl
-
-RUN git clone https://github.com/dockito/fig2coreos.git /tmp/fig2coreos && \
-    cd /tmp/fig2coreos && \
-    gem build fig2coreos.gemspec && \
-    gem install fig2coreos-0.1.6.gem && \
-    cd / && \
-    rm -rf /tmp/fig2coreos
-
-ENV FLEETCTL_ENDPOINT http://172.17.42.1:4001
+RUN curl -o /usr/local/bin/compose2bash -L https://github.com/dockito/compose2bash/releases/download/v1.0.0/compose2bash-linux_amd64 \
+    && chmod +x /usr/local/bin/compose2bash
 
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
