@@ -8,6 +8,7 @@ SERVICES_DIRECTORY=`mktemp -d /tmp/dockito-deployer-${APP_NAME}.XXXXXX` || exit 
 echo "Generating service files"
 compose2bash -app=$APP_NAME \
              -yml=$COMPOSE_FILE \
-             -output=$SERVICES_DIRECTORY
+             -output=$SERVICES_DIRECTORY \
+             -docker-host=$DOCKER_CONNECTION
 
 cp -r $SERVICES_DIRECTORY/* /usr/src/app/output

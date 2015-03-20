@@ -5,3 +5,4 @@ local:
   environment:
     VIRTUAL_HOST: provisioner.local.dockito.org
     VIRTUAL_PORT: 80
+    DOCKER_CONNECTION: unix:///tmp/docker.sock
