@@ -6,3 +6,4 @@ local:
     VIRTUAL_HOST: provisioner.local.dockito.org
     VIRTUAL_PORT: 80
     DOCKER_CONNECTION: unix:///tmp/docker.sock
+    ACCESS_TOKEN: C9nQk3waqBDzi3748vxNl5uNBWp57QPe
