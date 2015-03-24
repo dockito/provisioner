@@ -10,8 +10,6 @@ COPY package.json /usr/src/app/
 RUN npm install
 COPY . /usr/src/app
 
-RUN chmod +x /usr/src/app/bin/provision.sh
-
 EXPOSE 80
 
 CMD [ "npm", "start" ]
