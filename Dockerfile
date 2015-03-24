@@ -1,6 +1,8 @@
 FROM node:0.10.33
 
-RUN curl -o /usr/local/bin/compose2bash -L https://github.com/dockito/compose2bash/releases/download/v1.1.0/compose2bash-linux_amd64 \
+ENV COMPOSE2BASH_VERSION="v1.1.1"
+
+RUN curl -o /usr/local/bin/compose2bash -L https://github.com/dockito/compose2bash/releases/download/$COMPOSE2BASH_VERSION/compose2bash-linux_amd64 \
     && chmod +x /usr/local/bin/compose2bash
 
 RUN mkdir -p /usr/src/app
