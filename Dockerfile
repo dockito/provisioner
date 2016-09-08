@@ -1,6 +1,6 @@
 FROM node:0.10.33
 
-ENV COMPOSE2BASH_VERSION="v1.5.0"
+ENV COMPOSE2BASH_VERSION="v1.6.0"
 
 RUN curl -o /usr/local/bin/compose2bash -L https://github.com/dockito/compose2bash/releases/download/$COMPOSE2BASH_VERSION/compose2bash-linux_amd64 \
     && chmod +x /usr/local/bin/compose2bash
